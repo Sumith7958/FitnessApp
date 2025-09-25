@@ -1,0 +1,127 @@
+2025-09-24 20:10:34 INFO  HV000001: Hibernate Validator 8.0.3.Final
+2025-09-24 20:10:34 INFO  Starting UserServiceTest2 using Java 23 with PID 4128 (started by saisu in E:\java\FitnessApp\userService)
+2025-09-24 20:10:34 INFO  No active profile set, falling back to 1 default profile: "default"
+2025-09-24 20:10:35 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-24 20:10:35 INFO  Finished Spring Data repository scanning in 150 ms. Found 1 JPA repository interface.
+2025-09-24 20:10:35 INFO  Replacing 'dataSource' DataSource bean with embedded version
+2025-09-24 20:10:36 INFO  Starting embedded database: url='jdbc:h2:mem:32e2a56d-7b65-4811-a1cf-9b14004d8a08;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2025-09-24 20:10:36 INFO  HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-24 20:10:36 INFO  HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-24 20:10:37 INFO  HHH000026: Second-level cache disabled
+2025-09-24 20:10:37 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-24 20:10:37 INFO  HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory$EmbeddedDataSourceProxy@3ea48c37']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-24 20:10:39 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-24 20:10:39 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-24 20:10:40 INFO  Started UserServiceTest2 in 6.918 seconds (process running for 9.607)
+2025-09-24 20:10:41 WARN  SQL Error: 23505, SQLState: 23505
+2025-09-24 20:10:41 ERROR Unique index or primary key violation: "PUBLIC.UK1J9D9A06I600GD43UU3KM82JW_INDEX_7 ON PUBLIC.APP_USER(EMAIL NULLS FIRST) VALUES ( /* 1 */ 'duplicate@example.com' )"; SQL statement:
+insert into app_user (created_date_time,email,name,password,role,updated_date_time,id) values (localtimestamp,?,?,?,?,?,default) [23505-232]
+2025-09-24 20:10:41 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-24 20:12:21 INFO  HV000001: Hibernate Validator 8.0.3.Final
+2025-09-24 20:12:21 INFO  Starting UserServiceTest2 using Java 23 with PID 26388 (started by saisu in E:\java\FitnessApp\userService)
+2025-09-24 20:12:21 INFO  No active profile set, falling back to 1 default profile: "default"
+2025-09-24 20:12:22 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-24 20:12:22 INFO  Finished Spring Data repository scanning in 135 ms. Found 1 JPA repository interface.
+2025-09-24 20:12:22 INFO  Replacing 'dataSource' DataSource bean with embedded version
+2025-09-24 20:12:22 INFO  Starting embedded database: url='jdbc:h2:mem:0c75205c-f724-4b43-83be-61d06fba3add;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2025-09-24 20:12:23 INFO  HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-24 20:12:23 INFO  HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-24 20:12:23 INFO  HHH000026: Second-level cache disabled
+2025-09-24 20:12:24 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-24 20:12:24 INFO  HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory$EmbeddedDataSourceProxy@37b1149b']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-24 20:12:26 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-24 20:12:26 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-24 20:12:26 INFO  Started UserServiceTest2 in 6.624 seconds (process running for 9.875)
+2025-09-24 20:12:27 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-24 20:14:24 INFO  HV000001: Hibernate Validator 8.0.3.Final
+2025-09-24 20:14:24 INFO  Starting UserServiceTest2 using Java 23 with PID 25580 (started by saisu in E:\java\FitnessApp\userService)
+2025-09-24 20:14:24 INFO  No active profile set, falling back to 1 default profile: "default"
+2025-09-24 20:14:24 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-24 20:14:25 INFO  Finished Spring Data repository scanning in 87 ms. Found 1 JPA repository interface.
+2025-09-24 20:14:25 INFO  Replacing 'dataSource' DataSource bean with embedded version
+2025-09-24 20:14:25 INFO  Starting embedded database: url='jdbc:h2:mem:d30bae1e-5bca-405e-bc1e-8fe588486a31;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2025-09-24 20:14:25 INFO  HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-24 20:14:25 INFO  HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-24 20:14:25 INFO  HHH000026: Second-level cache disabled
+2025-09-24 20:14:26 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-24 20:14:26 INFO  HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory$EmbeddedDataSourceProxy@892af0e']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-24 20:14:27 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-24 20:14:27 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-24 20:14:28 INFO  Started UserServiceTest2 in 4.771 seconds (process running for 6.544)
+2025-09-24 20:14:29 WARN  SQL Error: 23505, SQLState: 23505
+2025-09-24 20:14:29 ERROR Unique index or primary key violation: "PUBLIC.UK1J9D9A06I600GD43UU3KM82JW_INDEX_7 ON PUBLIC.APP_USER(EMAIL NULLS FIRST) VALUES ( /* 1 */ 'duplicate@example.com' )"; SQL statement:
+insert into app_user (created_date_time,email,name,password,role,updated_date_time,id) values (localtimestamp,?,?,?,?,?,default) [23505-232]
+2025-09-24 20:14:29 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-24 20:16:41 INFO  HV000001: Hibernate Validator 8.0.3.Final
+2025-09-24 20:16:41 INFO  Starting UserServiceTest2 using Java 23 with PID 17748 (started by saisu in E:\java\FitnessApp\userService)
+2025-09-24 20:16:41 INFO  No active profile set, falling back to 1 default profile: "default"
+2025-09-24 20:16:41 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-24 20:16:42 INFO  Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interface.
+2025-09-24 20:16:42 INFO  Replacing 'dataSource' DataSource bean with embedded version
+2025-09-24 20:16:42 INFO  Starting embedded database: url='jdbc:h2:mem:b7370e2f-7c03-4735-ac93-0db8d062f152;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2025-09-24 20:16:42 INFO  HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-24 20:16:42 INFO  HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-24 20:16:42 INFO  HHH000026: Second-level cache disabled
+2025-09-24 20:16:43 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-24 20:16:43 INFO  HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory$EmbeddedDataSourceProxy@37b1149b']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-24 20:16:44 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-24 20:16:44 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-24 20:16:45 INFO  Started UserServiceTest2 in 4.599 seconds (process running for 6.586)
+2025-09-24 20:16:45 WARN  SQL Error: 23505, SQLState: 23505
+2025-09-24 20:16:45 ERROR Unique index or primary key violation: "PUBLIC.UK1J9D9A06I600GD43UU3KM82JW_INDEX_7 ON PUBLIC.APP_USER(EMAIL NULLS FIRST) VALUES ( /* 1 */ 'duplicate@example.com' )"; SQL statement:
+insert into app_user (created_date_time,email,name,password,role,updated_date_time,id) values (localtimestamp,?,?,?,?,?,default) [23505-232]
+2025-09-24 20:16:45 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-24 20:18:19 INFO  HV000001: Hibernate Validator 8.0.3.Final
+2025-09-24 20:18:19 INFO  Starting UserServiceTest2 using Java 23 with PID 12312 (started by saisu in E:\java\FitnessApp\userService)
+2025-09-24 20:18:19 INFO  No active profile set, falling back to 1 default profile: "default"
+2025-09-24 20:18:19 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-24 20:18:19 INFO  Finished Spring Data repository scanning in 78 ms. Found 1 JPA repository interface.
+2025-09-24 20:18:20 INFO  Replacing 'dataSource' DataSource bean with embedded version
+2025-09-24 20:18:20 INFO  Starting embedded database: url='jdbc:h2:mem:0802264c-65ee-4f2b-99fe-c395238e9ffd;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2025-09-24 20:18:20 INFO  HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-24 20:18:20 INFO  HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-24 20:18:20 INFO  HHH000026: Second-level cache disabled
+2025-09-24 20:18:21 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-24 20:18:21 INFO  HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory$EmbeddedDataSourceProxy@ca546a1']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-24 20:18:22 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-24 20:18:22 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-24 20:18:22 INFO  Started UserServiceTest2 in 4.136 seconds (process running for 6.081)
+2025-09-24 20:18:23 WARN  SQL Error: 23505, SQLState: 23505
+2025-09-24 20:18:23 ERROR Unique index or primary key violation: "PUBLIC.UK1J9D9A06I600GD43UU3KM82JW_INDEX_7 ON PUBLIC.APP_USER(EMAIL NULLS FIRST) VALUES ( /* 1 */ 'duplicate@example.com' )"; SQL statement:
+insert into app_user (created_date_time,email,name,password,role,updated_date_time,id) values (localtimestamp,?,?,?,?,?,default) [23505-232]
+2025-09-24 20:18:23 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'

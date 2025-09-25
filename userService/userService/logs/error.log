@@ -1,0 +1,8 @@
+2025-09-24 20:10:41 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK1J9D9A06I600GD43UU3KM82JW_INDEX_7 ON PUBLIC.APP_USER(EMAIL NULLS FIRST) VALUES ( /* 1 */ 'duplicate@example.com' )"; SQL statement:
+insert into app_user (created_date_time,email,name,password,role,updated_date_time,id) values (localtimestamp,?,?,?,?,?,default) [23505-232]
+2025-09-24 20:14:29 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK1J9D9A06I600GD43UU3KM82JW_INDEX_7 ON PUBLIC.APP_USER(EMAIL NULLS FIRST) VALUES ( /* 1 */ 'duplicate@example.com' )"; SQL statement:
+insert into app_user (created_date_time,email,name,password,role,updated_date_time,id) values (localtimestamp,?,?,?,?,?,default) [23505-232]
+2025-09-24 20:16:45 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK1J9D9A06I600GD43UU3KM82JW_INDEX_7 ON PUBLIC.APP_USER(EMAIL NULLS FIRST) VALUES ( /* 1 */ 'duplicate@example.com' )"; SQL statement:
+insert into app_user (created_date_time,email,name,password,role,updated_date_time,id) values (localtimestamp,?,?,?,?,?,default) [23505-232]
+2025-09-24 20:18:23 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Unique index or primary key violation: "PUBLIC.UK1J9D9A06I600GD43UU3KM82JW_INDEX_7 ON PUBLIC.APP_USER(EMAIL NULLS FIRST) VALUES ( /* 1 */ 'duplicate@example.com' )"; SQL statement:
+insert into app_user (created_date_time,email,name,password,role,updated_date_time,id) values (localtimestamp,?,?,?,?,?,default) [23505-232]
