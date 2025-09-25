@@ -15,13 +15,13 @@ public class UserController {
     @Autowired
     UserService UserService;
 
-    @PostMapping("/Signup")
+    @PostMapping("/signup")
     public ResponseEntity<ResponseUser> signup(@Valid @RequestBody UserDetails userDetails){
         return UserService.signup(userDetails);
     }
 
-    @GetMapping("/user/getdetails/{id}")
-    public ResponseEntity<ResponseUser> getUserDetails(@PathVariable int id){
+    @GetMapping("/user/getdetails")
+    public ResponseEntity<ResponseUser> getUserDetails(@RequestBody String id){
         return UserService.getuserdetails(id);
     }
 
