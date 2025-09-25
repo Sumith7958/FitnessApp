@@ -31,6 +31,7 @@ public class UserService {
             userRepo.save(userModel);
             UserModel temp=userRepo.findByEmail(userDetails.getEmail());
             ResponseUser responseUser=new ResponseUser();
+            responseUser.setUid(temp.getUid());
             responseUser.setEmail(temp.getEmail());
             responseUser.setCreatedDateTime(temp.getCreatedDateTime());
             responseUser.setPassword(temp.getPassword());
@@ -50,10 +51,11 @@ public class UserService {
         }
     }
 
-    public ResponseEntity<ResponseUser> getuserdetails(int id) {
+    public ResponseEntity<ResponseUser> getuserdetails(String id) {
 
-        UserModel temp=userRepo.findById(id).orElseThrow(()-> new RuntimeException("User Not Found"));
+        UserModel temp=userRepo.findByUid(id);
         ResponseUser responseUser=new ResponseUser();
+        responseUser.setUid(temp.getUid());
         responseUser.setEmail(temp.getEmail());
         responseUser.setCreatedDateTime(temp.getCreatedDateTime());
         responseUser.setPassword(temp.getPassword());
@@ -62,5 +64,9 @@ public class UserService {
         responseUser.setRole(temp.getRole());
         return new ResponseEntity<>(responseUser,HttpStatus.ACCEPTED);
 
+    }
+
+    public ResponseEntity<Boolean> validateuser(String uid) {
+        return new ResponseEntity<>(userRepo.existsByUid(uid),HttpStatus.OK);
     }
 }

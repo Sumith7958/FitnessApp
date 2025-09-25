@@ -10,8 +10,8 @@ import java.time.LocalDateTime;
 @Table(name="App_User")
 public class UserModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    String uid;
     @Column(unique = true)
     String email;
     @Column(nullable = false)
@@ -27,6 +27,10 @@ public class UserModel {
 
     public String getEmail() {
         return email;
+    }
+
+    public String getUid() {
+        return uid;
     }
 
     public void setEmail(String email) {
@@ -49,9 +53,7 @@ public class UserModel {
         this.password = password;
     }
 
-    public long getId() {
-        return id;
-    }
+
 
     public UserType getRole() {
         return role;

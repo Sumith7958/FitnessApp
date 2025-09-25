@@ -1,4 +1,4 @@
-package com.UserService.userService;
+package com.UserService.userService.Controller;
 
 import com.UserService.userService.Dto.ResponseUser;
 import com.UserService.userService.Dto.UserDetails;
