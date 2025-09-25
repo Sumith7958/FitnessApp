@@ -6,7 +6,12 @@ import com.fitness.activityservice.dto.ActivityResponse;
 import com.fitness.activityservice.model.Activity;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.BodyInserters;
+import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.reactive.function.client.WebClientResponseException;
 
 @Service
 @RequiredArgsConstructor
@@ -14,8 +19,13 @@ import org.springframework.stereotype.Service;
 public class ActivityService {
 
     private final ActivityRepository activityRepository;
+    private final WebClient userservicewebclient;
 
-    public ActivityResponse trackActivity(ActivityRequest request) {
+    public ResponseEntity<ActivityResponse>  trackActivity(ActivityRequest request) {
+
+        if(!validateUser(request.getUserId())){
+            return new ResponseEntity<>(new ActivityResponse(),HttpStatus.BAD_REQUEST);
+        }
 
         Activity activity = Activity.builder()
                 .userId(request.getUserId())
@@ -28,7 +38,7 @@ public class ActivityService {
 
         Activity savedActivity = activityRepository.save(activity);
 
-        return mapToResponse(savedActivity);
+        return new ResponseEntity<>(mapToResponse(savedActivity),HttpStatus.OK) ;
     }
 
     private ActivityResponse mapToResponse(Activity activity){
@@ -43,5 +53,22 @@ public class ActivityService {
         response.setCreatedAt(activity.getCreatedAt());
         response.setUpdatedAt(activity.getUpdatedAt());
         return response;
+    }
+
+    public boolean validateUser(String userId){
+        try {
+            return userservicewebclient.post()
+                    .uri("/activityservice/validateuser")
+                    .body(BodyInserters.fromValue(userId)) // Assuming userId is the value to send
+                    .retrieve()
+                    .bodyToMono(Boolean.class)
+                    .block();
+        }catch (WebClientResponseException e) {
+            if (e.getStatusCode() == HttpStatus.NOT_FOUND)
+                throw new RuntimeException("User Not Found: " + userId);
+            else if (e.getStatusCode() == HttpStatus.BAD_REQUEST)
+                throw new RuntimeException("Invalid Request: " + userId);
+        }
+        return false;
     }
 }

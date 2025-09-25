@@ -20,7 +20,7 @@ public class ResponseUser {
     private UserType role = UserType.USER;
     private LocalDateTime createdDateTime;
     private LocalDateTime updatedDateTime;
-
+    private String uid;
 
 
 }
