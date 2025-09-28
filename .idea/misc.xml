@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/Fitness/pom.xml" />
         <option value="$PROJECT_DIR$/activityservice/pom.xml" />
         <option value="$PROJECT_DIR$/Aiservice/pom.xml" />
+        <option value="$PROJECT_DIR$/configserver/pom.xml" />
       </list>
     </option>
   </component>
