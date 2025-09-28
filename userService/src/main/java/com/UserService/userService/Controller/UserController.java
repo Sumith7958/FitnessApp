@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -20,9 +20,14 @@ public class UserController {
         return UserService.signup(userDetails);
     }
 
-    @GetMapping("/user/getdetails")
+    @GetMapping("/getdetails")
     public ResponseEntity<ResponseUser> getUserDetails(@RequestBody String id){
         return UserService.getuserdetails(id);
+    }
+
+    @GetMapping("/hello")
+    public String hello(){
+        return "hello";
     }
 
 }

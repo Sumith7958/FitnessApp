@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="gateway" />
         <module name="Fitness" />
         <module name="configserver" />
       </profile>
@@ -34,6 +35,7 @@
       <module name="Fitness" options="-parameters" />
       <module name="activityservice" options="-parameters" />
       <module name="configserver" options="-parameters" />
+      <module name="gateway" options="-parameters" />
       <module name="userService" options="-parameters" />
     </option>
   </component>
