@@ -1,5 +1,6 @@
 package com.aiservice.Aiservice.Model;
 
+import com.aiservice.Aiservice.dto.ActivityType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -27,6 +28,7 @@ public class Recommendations {
     private List<String> improvements;
     private List<String> suggestions;
     private List<String> safety;
+
     @CreatedDate
     private LocalDateTime createdAt;
 }

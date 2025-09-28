@@ -9,16 +9,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Fitness" />
       </profile>
-      <profile name="Annotation profile for activityservice" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath>
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
-        </processorPath>
-        <module name="activityservice" />
-        <module name="ActivityService" />
-      </profile>
       <profile name="Annotation profile for userService" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -26,16 +16,10 @@
         <processorPath>
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
-        <module name="userService" />
-      </profile>
-      <profile name="Annotation profile for Aiservice" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
-        </processorPath>
         <module name="Aiservice" />
+        <module name="ActivityService" />
+        <module name="activityservice" />
+        <module name="userService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

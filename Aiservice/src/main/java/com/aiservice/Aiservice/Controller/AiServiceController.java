@@ -2,6 +2,7 @@ package com.aiservice.Aiservice.Controller;
 
 import com.aiservice.Aiservice.Model.Recommendations;
 import com.aiservice.Aiservice.Service.AiService;
+import com.aiservice.Aiservice.dto.Activity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,11 @@ public class AiServiceController {
     @GetMapping("/activity")
     public ResponseEntity<Recommendations> getActivityRecommendation(@PathVariable String activityId) {
         return ResponseEntity.ok(aiService.getActivityRecommendation(activityId));
+    }
+
+    @PostMapping("/testing")
+    public void reccomandationstest(@RequestBody Activity activity){
+         aiService.reccomandationstest(activity);
     }
 
 }
