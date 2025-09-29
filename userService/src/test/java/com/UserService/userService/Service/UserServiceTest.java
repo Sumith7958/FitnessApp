@@ -95,5 +95,6 @@ class UserServiceTest {
             assertEquals(HttpStatus.CONFLICT, response.getStatusCode());
             assertEquals("Something went wrong!", response.getBody());
         }
+
     }
 }

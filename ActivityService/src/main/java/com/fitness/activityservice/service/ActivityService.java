@@ -4,6 +4,8 @@ import com.fitness.activityservice.repo.ActivityRepository;
 import com.fitness.activityservice.dto.ActivityRequest;
 import com.fitness.activityservice.dto.ActivityResponse;
 import com.fitness.activityservice.model.Activity;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,10 +31,12 @@ public class ActivityService {
     @Value("${app.kafka.topic}")
     private String topic;
 
+    //@CircuitBreaker(name = "userBreaker",fallbackMethod = "trackactivityfallback")
+    @Retry(name = "userBreaker",fallbackMethod = "trackactivityfallback")
     public ResponseEntity<ActivityResponse>  trackActivity(ActivityRequest request) {
 
         if(!validateUser(request.getUserId())){
-            return new ResponseEntity<>(new ActivityResponse(),HttpStatus.BAD_REQUEST);
+            throw new IllegalArgumentException("Invalid user");
         }
 
         Activity activity = Activity.builder()
@@ -50,6 +54,11 @@ public class ActivityService {
 
         return new ResponseEntity<>(mapToResponse(savedActivity),HttpStatus.OK) ;
     }
+    public ResponseEntity<ActivityResponse> trackactivityfallback(ActivityRequest request, Throwable ex) {
+        log.info("hello");
+        return new ResponseEntity<>(new ActivityResponse(), HttpStatus.SERVICE_UNAVAILABLE);
+    }
+
 
     private ActivityResponse mapToResponse(Activity activity){
         ActivityResponse response = new ActivityResponse();
